@@ -1,6 +1,6 @@
 #Kian Ambrose
 # Neil Patel is making this edit
-def encoder(string):
+def encoder(string):   #encoder
     d = []
     for i in string:
         a = int(i)
@@ -13,19 +13,19 @@ def encoder(string):
     str1 = ""
     for j in d:
         str1 += j
-    return str1
+    return str1      #returns string
 
 
 def decoder(fake_p):
     fake_p = list(fake_p)
-    string2 = ""
+    string2 = ""       #holds place
     for i in range(len(fake_p)):
         if fake_p[i] == "0":
             fake_p[i] = "7"
             string2 += fake_p[i]
             continue
         if fake_p[i] == "2":
-            fake_p[i] = "9"
+            fake_p[i] = "9"        #deals with numbers going to ten
             string2 += fake_p[i]
             continue
         if fake_p[i] == "1":
@@ -35,12 +35,12 @@ def decoder(fake_p):
         if fake_p[i] == "3" or fake_p[i] == "4" or fake_p[i] == "5" or fake_p[i] == "6" or fake_p[i] == "7" or fake_p[i] == "8" or fake_p[i] == "9":
             real = (int(fake_p[i]) - 3)
             string2 += str(real)
-    return string2
+    return string2     #returns string
 
 
 if __name__ == "__main__":
 
-    while True:
+    while True:      #repeats
         print("Menu")
         print("-"*13)
         print("1. Encode")
@@ -55,4 +55,4 @@ if __name__ == "__main__":
         elif x == "2":
             print(f"The encoded password is {store_fake}, and the original password is {decoder(store_fake)}.\n")
         elif x == "3":
-            break
+            break      #quits
